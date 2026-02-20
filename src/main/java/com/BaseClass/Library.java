@@ -8,11 +8,13 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Library {
 	
+	public static Actions action;
 	public static WebDriver driver;
 	public static Properties prop;
 	public void loadConfig() {

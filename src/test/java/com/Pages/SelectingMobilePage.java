@@ -1,5 +1,7 @@
 package com.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +14,8 @@ public class SelectingMobilePage extends Library {
 		PageFactory.initElements(driver, this);
 	}
 	
+	/*
+	
 	@FindBy(xpath="//div[text()='Buy now']")
 	public WebElement Buynow;
 	
@@ -23,4 +27,15 @@ public class SelectingMobilePage extends Library {
 	
 	@FindBy(xpath="//div[text()='Verify']")
 	public WebElement Verify;
+	x
+	
+	@FindBy(xpath="//div[@class=\"col col-7-12\"]")
+	public List<WebElement> products;
+	
+	@FindBy(xpath="(//div[@class=\"col col-7-12\"])[3]")
+	public WebElement Thirdproduct;
+	 */
+	
+	
+	
 }

@@ -13,10 +13,12 @@ public class MobilePage extends Library{
 	
 	}
 	
+	/*
 	@FindBy(xpath = "//*[@id=\"container\"]/div/div[3]/div[1]/div[1]/div/div[1]/div/section[4]/div[2]/div[1]/div[2]/div/label")
 	public WebElement Apple; 
 	
+	
 	@FindBy(xpath="//img[@alt=\"Apple iPhone 16 (White, 128 GB)\"]")
 	public WebElement Apple4;
-	
+	*/
 }
