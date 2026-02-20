@@ -2,6 +2,8 @@ package com.StepDefiniton;
 
 import org.junit.Assert;
 
+
+
 import com.Pages.FilterPage;
 import com.Pages.MobilePage;
 import com.Pages.SearchPages;
@@ -30,11 +32,13 @@ public class FlipkartSteps {
     	
     	fp.searchBox.clear();
         rf.typeValue(fp.searchBox, "Mobile");
+        
     }
 
     @When("User clicks the Search button")
     public void user_clicks_the_search_button() {
         rf.clickElement(fp.searchButton);
+        
     }
 
     @Then("User should see results for {string}")
@@ -115,7 +119,7 @@ rf.windowhandle();
         rf.Getvalue(sp.Thirdproduct);
     }
     
-     */
+     
     FilterPage F = new FilterPage();
     
     @Then("Select minmum and maximum value")
@@ -154,6 +158,7 @@ rf.windowhandle();
     	rf.waitForElement(F.BatteryCapcity);
     	rf.waitForElement(F.BatteryCapcity);
     	rf.clickElement(F.BatteryCapcity);
+    	rf.waitForElement(F.BatteryCapcity);
     	       
     }
     
@@ -171,5 +176,70 @@ rf.windowhandle();
     	rf.waitForElement(F.Boardgames);
         rf.HoverCLick(F.Boardgames);
     }
+    
+    
+    
+    
+    @Given("Enter the {string} in the searchbox")
+    public void enter_the_in_the_searchbox(String Searchtext) {
+    	rf.typeValue(fp.searchBox, Searchtext);
+    	rf.clickElement(fp.closeLoginPopUp);
+    	 
+       
+    }
+    @When("click search box")
+    public void click_search_box() {
+    	rf.clickElement(fp.searchButton);
+    	
+    	rf.Screen("/Flipkart/src/test/resources/ScreenShots/search.png");
+        
+    }
+    */
+    
+    FilterPage F = new FilterPage();
+    
+    @Given("User can move to login link")
+    public void user_can_move_to_login_link() {
+    
+    	rf.waitForElement(F.Login);
+    	rf.Hover(F.Login);
+    }
+    @When("user clicks the flipkartplus zone")
+    public void user_clicks_the_flipkartplus_zone() {
+    	rf.waitForElement(F.FlipkartPlus);
+       rf.HoverCLick(F.FlipkartPlus);
+      
+    }
+    @When("hover the mouse on Furniture")
+    public void hover_the_mouse_on_furniture() {
+    	rf.waitForElement(F.Furniture);
+        rf.Hover(F.Furniture);
+    }
+    @When("user clicks the Bedsheets")
+    public void user_clicks_the_bedsheets() {
+    rf.waitForElement(F.Bedsheets);
+       rf.HoverCLick(F.Bedsheets);
+    }
+    @When("Scroll down and selcte one particular result")
+    public void scroll_down_and_selcte_one_particular_result() {
+    	
+        rf.clickElement(F.Bedsheet);
+        rf.windowhandle();
+        rf.waitforpageload();
+    }
+    @When("user enters the pincode and check the pincode")
+    public void user_enters_the_pincode_and_check_the_pincode() {
+    	rf.scrolldown(F.location);
+        rf.clickElement(F.location);
+        rf.typeValue(F.area, "Erode");
+        rf.clickElement(F.city);
+        rf.clickElement(F.confirm);
+    }
+    
+
+    @When("user clicks the buy now")
+    public void user_clicks_the_buy_now() {
+    	rf.clickElement(F.Buy);
+}
     
 }

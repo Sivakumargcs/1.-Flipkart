@@ -12,7 +12,7 @@ public class SearchPages extends Library {
     }
 
     // Close button for initial login popup (if it appears)
-    @FindBy(xpath = "//span[@class='_30XB9F']")
+    @FindBy(xpath = "//span[@role=\"button\"]")
     public WebElement closeLoginPopUp;
 
     @FindBy(xpath = "(//input[@title=\"Search for Products, Brands and More\"])[1]")
